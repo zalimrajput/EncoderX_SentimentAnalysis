@@ -1,0 +1,45 @@
+# ── Model weights (too large for plain git — download separately, see README) ──
+backend/model/model.safetensors
+backend/model/*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# Keep the small model metadata files (config/tokenizer) versioned:
+!backend/model/config.json
+!backend/model/tokenizer.json
+!backend/model/tokenizer_config.json
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Node / Next.js ──
+node_modules/
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+.eslintcache
+
+# ── Environment / secrets ──
+.env
+.env.*
+!.env.example
+
+# ── OS / editor junk ──
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
