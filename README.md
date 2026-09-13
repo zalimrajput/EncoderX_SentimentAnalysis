@@ -68,17 +68,29 @@ Open **http://localhost:3000**, type (or paste) a movie review, hit
 
 ## 🧠 Get the model
 
-The fine-tuned weights (`model.safetensors`, 437 MB) are excluded from git to
-keep the repository light. Place the file at:
+The fine-tuned weights (BERT-base, ~437 MB) are excluded from git to keep the
+repository light. Download them and place the file at:
 
 ```
 backend/model/model.safetensors
 ```
 
-**Options:**
-- Download from the release / drive link: _[add your link here]_
-- Or fine-tune it yourself on the IMDB dataset with Hugging Face
-  `Trainer` / `bert-base-uncased` and save with `model.save_pretrained("model")`.
+**Download the fine-tuned model (Google Drive):**
+
+> 📦 **[model.zip — fine-tuned BERT weights](https://drive.google.com/file/d/1as6PVs3z0Wrfzm_kspU_mLjVMa16SFe-/view?usp=sharing)**
+
+Extract the zip into `backend/model/` so the layout looks like:
+
+```
+backend/model/
+├── config.json
+├── model.safetensors
+├── tokenizer.json
+└── tokenizer_config.json
+```
+
+Alternatively, fine-tune it yourself on the IMDB dataset with Hugging Face
+`Trainer` / `bert-base-uncased` and save with `model.save_pretrained("model")`.
 
 The small metadata files (`config.json`, `tokenizer.json`,
 `tokenizer_config.json`) **are** versioned, so once the weights file is in

@@ -22,8 +22,12 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
-## Loading your fine-tuned modelThe fine-tuned checkpoint lives in `backend/model/` (this repo already includes
-it: `config.json`, `model.safetensors`, tokenizer files). If you re-train and
+## Loading your fine-tuned model
+
+The fine-tuned checkpoint lives in `backend/model/`. The weights file
+(`model.safetensors`) is not stored in git — download it from the
+[Google Drive link](https://drive.google.com/file/d/1as6PVs3z0Wrfzm_kspU_mLjVMa16SFe-/view?usp=sharing)
+in the root README and extract it into `backend/model/`. If you re-train and
 save a new checkpoint with `model.save_pretrained(...)` /
 `tokenizer.save_pretrained(...)`, either overwrite that directory or point
 `MODEL_DIR` at the new one:
